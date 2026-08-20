@@ -10,4 +10,7 @@ function getComputerChoice() {
     }
 }
 
-console.log(getComputerChoice())
+let getHumanChoice = () => {
+    let humanPick = window.prompt().toLowerCase()
+    return humanPick
+}
