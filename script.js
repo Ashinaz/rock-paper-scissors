@@ -14,3 +14,23 @@ let getHumanChoice = () => {
     let humanPick = window.prompt().toLowerCase()
     return humanPick
 }
+
+function playRound(computerChoice, humanChoice) {
+    computerChoice = getComputerChoice()
+    humanChoice = getComputerChoice()
+    let humanScore = 0
+    let computerScore = 0
+    let paperBeatsRock = (
+        (computerChoice == "paper" ||humanChoice == "paper") &&
+        (computerChoice == "rock" || humanChoice == "rock")
+    )
+    let rockBeatsScissors = (
+        (computerChoice == "rock" ||humanChoice == "rock") &&
+        (computerChoice == "scissors" || humanChoice == "scissors")
+    )
+    let scissorsBeatsPaper = (
+        (computerChoice == "scissors" ||humanChoice == "scissors") &&
+        (computerChoice == "paper" || humanChoice == "paper")
+    )
+    
+}
