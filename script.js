@@ -20,17 +20,15 @@ function playRound(computerChoice, humanChoice) {
     humanChoice = getComputerChoice()
     let humanScore = 0
     let computerScore = 0
-    let paperBeatsRock = (
-        (computerChoice == "paper" ||humanChoice == "paper") &&
-        (computerChoice == "rock" || humanChoice == "rock")
+    let humanWin = (
+        (humanChoice == "rock" && computerChoice == "scissors") ||
+        (humanChoice== "paper" && computerChoice == "rock") ||
+        (humanChoice== "scissors" && computerChoice == "paper")
     )
-    let rockBeatsScissors = (
-        (computerChoice == "rock" ||humanChoice == "rock") &&
-        (computerChoice == "scissors" || humanChoice == "scissors")
-    )
-    let scissorsBeatsPaper = (
-        (computerChoice == "scissors" ||humanChoice == "scissors") &&
-        (computerChoice == "paper" || humanChoice == "paper")
+    let computerWin = (
+        (computerChoice == "rock" && humanChoice == "scissors") ||
+        (computerChoice== "paper" && humanChoice == "rock") ||
+        (computerChoice== "scissors" && humanChoice == "paper")
     )
     
 }
