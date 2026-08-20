@@ -18,8 +18,6 @@ let getHumanChoice = () => {
 function playRound(computerChoice, humanChoice) {
     computerChoice = getComputerChoice()
     humanChoice = getComputerChoice()
-    let humanScore = 0
-    let computerScore = 0
     let humanWin = (
         (humanChoice == "rock" && computerChoice == "scissors") ||
         (humanChoice== "paper" && computerChoice == "rock") ||
@@ -32,8 +30,16 @@ function playRound(computerChoice, humanChoice) {
     )
 
     if (humanWin) {
-        humanScore++
+        return humanScore++
     }else if (computerWin) {
-        computerScore++
+        return computerScore++
     }
+}
+
+function playGame() {
+    let humanScore = 0
+    let computerScore = 0
+    let rounds = 5 
+    let winner
+
 }
