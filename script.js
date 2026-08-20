@@ -30,5 +30,10 @@ function playRound(computerChoice, humanChoice) {
         (computerChoice== "paper" && humanChoice == "rock") ||
         (computerChoice== "scissors" && humanChoice == "paper")
     )
-    
+
+    if (humanWin) {
+        humanScore++
+    }else if (computerWin) {
+        computerScore++
+    }
 }
