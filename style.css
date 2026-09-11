@@ -2,4 +2,23 @@ body{
   display: flex;
   flex-direction: column;
   margin: 0;
+  font-family: sans-serif;
+  background-color: #93d9e1;
+}
+
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-weight: 600;
+  height: 100px;
+  background-color: #6fe187;
+  padding: 10px;
+  font-size: 20px;
+  color: white;
+}
+
+.header h1{
+  margin: 0;
 }
