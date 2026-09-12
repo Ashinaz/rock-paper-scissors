@@ -41,9 +41,18 @@ function playRound(humanChoice) {
 function playGame(e) {
     let humanScore = 0
     let computerScore = 0
+    const winText = document.querySelector(".win")
     let humanChoice = e.target.value
     let winner = playRound(humanChoice)
-    if (winner = "human") {
-        humanScore++
-    }else computerScore++
+    if (rounds < 5) {
+        if (winner = "human") {
+            winText.textContent = `Round ${rounds+1}: You are the winner!`
+            humanScore++
+        }else {
+            winText.textContent = `Round ${rounds+1}: You are the winner!`
+            humanScore++
+        }
+    }else {
+
+    }
 }
