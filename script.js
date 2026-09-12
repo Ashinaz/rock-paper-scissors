@@ -60,6 +60,14 @@ function playGame(e) {
             winText.textContent = `Round ${rounds+1}: It's a draw!`
             rounds++
         }
+    }else {
+        if (humanScore > computerScore) {
+            winText.textContent = `You are the winner of Roshambo with a score of ${humanScore}`
+        }else if (computerScore > humanScore) {
+            winText.textContent = `You are the loser of Roshambo with a score of ${humanScore}`
+        } else if (humanScore == computerScore) {
+            winText.textContent = `You tied with a score of ${humanScore}`
+        }
     }
 
     }
