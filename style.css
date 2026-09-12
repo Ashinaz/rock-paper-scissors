@@ -22,3 +22,15 @@ body{
 .header h1{
   margin: 0;
 }
+
+.score-section{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.round{
+  height: 200px;
+  width: 200px;
+  background-color: white;
+}
