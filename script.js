@@ -1,3 +1,9 @@
+const buttons = document.querySelectorAll("human")
+for (button of buttons) {
+    button.addEventListener("click", playGame)
+}
+
+
 function getComputerChoice() {
     let getRandomNumber = Math.floor(Math.random() * 3)
     switch(getRandomNumber) {
@@ -10,13 +16,8 @@ function getComputerChoice() {
     }
 }
 
-let getHumanChoice = () => {
-    return window.prompt().toLowerCase()
-}
-
-function playRound() {
+function playRound(humanChoice) {
     let computerChoice = getComputerChoice()
-    let humanChoice = getHumanChoice()
     let humanWin = (
         (humanChoice == "rock" && computerChoice == "scissors") ||
         (humanChoice== "paper" && computerChoice == "rock") ||
@@ -35,13 +36,15 @@ function playRound() {
     }
 }
 
-function playGame() {
+function playGame(e) {
     let winner
     let humanScore = 0
     let computerScore = 0
 
     for(let rounds = 0; rounds < 5; rounds++) {
-        winner = playRound()
+        let humanChoice = e.target.value
+        console.log(humanChoice)
+        winner = playRound(humanChoice)
         if(winner == "human") (humanScore += 1)
             else computerScore += 1
     }
