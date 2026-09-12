@@ -48,3 +48,22 @@ body{
   font-weight: 600;
   font-size: 20px;
 }
+
+.game{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.win{
+  height: 200px;
+  width: 200px;
+}
+
+.rps{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vh;
+}
