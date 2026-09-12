@@ -2,6 +2,7 @@ const buttons = document.querySelectorAll(".human")
 for (let button of buttons) {
     button.addEventListener("click", playGame)
 }
+const winText = document.querySelector(".win")
 
 function getComputerChoice() {
     let getRandomNumber = Math.floor(Math.random() * 3)
@@ -31,6 +32,7 @@ function playRound(humanChoice) {
     console.log(computerWin)
     console.log(humanChoice)
     console.log(computerChoice)
+
     if (humanWin) {
         return "human"
     }else if (computerWin) {
@@ -43,7 +45,6 @@ let computerScore = 0
 let rounds = 0
 
 function playGame(e) {
-    const winText = document.querySelector(".win")
     let humanChoice = e.target.value
     let winner = playRound(humanChoice)
     console.log(winner)
@@ -60,14 +61,17 @@ function playGame(e) {
             winText.textContent = `Round ${rounds+1}: It's a draw!`
             rounds++
         }
-    }else {
-        if (humanScore > computerScore) {
-            winText.textContent = `You are the winner of Roshambo with a score of ${humanScore}`
-        }else if (computerScore > humanScore) {
-            winText.textContent = `You are the loser of Roshambo with a score of ${humanScore}`
-        } else if (humanScore == computerScore) {
-            winText.textContent = `You tied with a score of ${humanScore}`
+
+        if (rounds == 5) {
+            if (humanScore > computerScore) {
+                winText.textContent = `You are the winner of Roshambo with a score of ${humanScore}`
+            }else if (computerScore > humanScore) {
+                winText.textContent = `You are the loser of Roshambo with a score of ${humanScore}`
+            } else if (humanScore == computerScore) {
+                winText.textContent = `You tied with a score of ${humanScore}`
+            }
         }
+
     }
 
     }
