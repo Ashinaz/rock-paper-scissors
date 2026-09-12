@@ -15,8 +15,6 @@ function getComputerChoice() {
     }
 }
 
-let rounds = 0
-
 function playRound(humanChoice) {
     let computerChoice = getComputerChoice()
     let humanWin = (
@@ -40,9 +38,11 @@ function playRound(humanChoice) {
     } else return "draw"
 }
 
+let humanScore = 0
+let computerScore = 0
+let rounds = 0
+
 function playGame(e) {
-    let humanScore = 0
-    let computerScore = 0
     const winText = document.querySelector(".win")
     let humanChoice = e.target.value
     let winner = playRound(humanChoice)
