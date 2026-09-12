@@ -29,13 +29,15 @@ function playRound(humanChoice) {
         (computerChoice== "paper" && humanChoice == "rock") ||
         (computerChoice== "scissors" && humanChoice == "paper")
     )
-    rounds++
-    console.log(rounds)
+    console.log(humanWin)
+    console.log(computerWin)
+    console.log(humanChoice)
+    console.log(computerChoice)
     if (humanWin) {
         return "human"
-    }else {
+    }else if (computerWin) {
         return "computer"
-    }
+    } else return "draw"
 }
 
 function playGame(e) {
@@ -44,15 +46,20 @@ function playGame(e) {
     const winText = document.querySelector(".win")
     let humanChoice = e.target.value
     let winner = playRound(humanChoice)
+    console.log(winner)
     if (rounds < 5) {
         if (winner = "human") {
             winText.textContent = `Round ${rounds+1}: You are the winner!`
             humanScore++
-        }else {
-            winText.textContent = `Round ${rounds+1}: You are the winner!`
-            humanScore++
+            rounds++
+        }else if (winner = "computer") {
+            winText.textContent = `Round ${rounds+1}: You Lost!`
+            computerScore++
+            rounds++
+        } else if (winner = "draw") {
+            winText.textContent = `Round ${rounds+1}: It's a draw!`
+            rounds++
         }
-    }else {
+    }
 
     }
-}
