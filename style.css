@@ -91,3 +91,12 @@ body{
   font-size: 26px;
   padding: 40px 10px 10px 10px;
 }
+
+.round{
+  color: #268817;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 90px;
+}
