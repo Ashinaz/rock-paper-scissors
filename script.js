@@ -3,6 +3,7 @@ for (let button of buttons) {
     button.addEventListener("click", playGame)
 }
 const winText = document.querySelector(".win")
+ 
 
 function getComputerChoice() {
     let getRandomNumber = Math.floor(Math.random() * 3)

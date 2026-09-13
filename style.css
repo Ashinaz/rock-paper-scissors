@@ -32,7 +32,7 @@ body{
   box-shadow: 0px 0px 10px 0px;
 }
 
-.round{
+.score{
   height: 150px;
   width: 150px;
   background-color: white;
@@ -92,7 +92,7 @@ body{
   padding: 40px 10px 10px 10px;
 }
 
-.round{
+.score{
   color: #268817;
   display: flex;
   justify-content: center;
