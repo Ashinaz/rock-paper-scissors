@@ -3,7 +3,8 @@ for (let button of buttons) {
     button.addEventListener("click", playGame)
 }
 const winText = document.querySelector(".win")
- 
+const scoreHuman = document.querySelector(".score.player")
+const scoreComputer = document.querySelector(".score.enemy")
 
 function getComputerChoice() {
     let getRandomNumber = Math.floor(Math.random() * 3)
@@ -53,10 +54,12 @@ function playGame(e) {
         if (winner == "human") {
             winText.textContent = `Round ${rounds+1}: You are the winner!`
             humanScore++
+            scoreHuman.textContent = humanScore
             rounds++
         }else if (winner =="computer") {
             winText.textContent = `Round ${rounds+1}: You Lost!`
             computerScore++
+            scoreComputer.textContent = computerScore
             rounds++
         } else if (winner == "draw") {
             winText.textContent = `Round ${rounds+1}: It's a draw!`
